@@ -1,0 +1,13 @@
+# Build output
+/dist/
+/dpm
+/dpm.exe
+
+# Test binaries
+*.test
+*.test.exe
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

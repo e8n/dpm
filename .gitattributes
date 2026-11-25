@@ -1,0 +1,6 @@
+# 既定は LF 固定。CRLF が必要なものだけ個別に上書きする。
+* text=auto eol=lf
+
+# Windows 慣習に合わせ CRLF 固定（PowerShell / バッチ）
+*.ps1 text eol=crlf
+*.bat text eol=crlf
