@@ -1,0 +1,23 @@
+﻿name: example-project
+version: 1.0.0
+description: Claude Code assets of an example project (deployed from a hub repository).
+author: example
+targets:
+- claude
+dependencies:
+  apm:
+  - ../skills-hub/packages/commit
+  - ../skills-hub/packages/code-review
+  - ../skills-hub/packages/daily-report
+  - ../skills-hub/packages/design-notes
+  - ../skills-hub/packages/file-index
+  - github.com/microsoft/playwright-cli/skills/playwright-cli#v0.1.14
+  - ../skills-hub/packages/editor-tasks
+  - ../skills-hub/packages/status
+  - ../skills-hub/packages/handoff
+  - ../skills-hub/packages/task-runner
+  - ../skills-hub/packages/usage
+  - ../skills-hub/packages/project-icon
+  mcp: []
+includes: auto
+scripts: {}

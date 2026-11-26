@@ -55,13 +55,10 @@ func run(args []string, stdout, stderr io.Writer) int {
 	case "--help", "-help", "-h", "help":
 		fmt.Fprint(stdout, usage)
 		return exitOK
-	case "install", "check":
-		if err := checkGit(gitVersionOutput); err != nil {
-			fmt.Fprintf(stderr, "dpm: %v\n", err)
-			return exitError
-		}
-		fmt.Fprintf(stderr, "dpm: %s is not implemented yet\n", args[0])
-		return exitError
+	case "install":
+		return runInstall(args[1:], stdout, stderr)
+	case "check":
+		return runCheck(args[1:], stdout, stderr)
 	default:
 		fmt.Fprintf(stderr, "dpm: unknown command %q\n\n%s", args[0], usage)
 		return exitUsage
